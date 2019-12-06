@@ -1,0 +1,14 @@
+USE [Keys]
+GO
+
+
+
+SELECT OwnerId
+,Name
+,OP.PropertyId
+,Value
+
+from OwnerProperty as OP
+full  join Property as P on OP.PropertyId=P.Id
+full join PropertyHomeValue as PHV on P.Id=PHV.PropertyId
+where OwnerId=1426
